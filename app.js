@@ -1,31 +1,42 @@
 document.body.innerHTML = "";
+const mickeyTheCat = {
+  name: "mickey",
+  photo: "images/mickeyTheCat.jpg",
+  board: "mickeyBoard"
+}
+const willyTheCat = {
+  name: "willy",
+  photo: "images/willyTheCat.jpg",
+  board: "willyBoard"
+}
+
 // Here we put cats on an Array
-var catsArray = ["mickeyTheCat", "willyTheCat"];
+var catsArray = [mickeyTheCat,willyTheCat];
 // Loop over array to define cats
 for (var i = 0; i < catsArray.length; i++) {
   var num = i;
-  var clickCopy=0;
+  var clickCopy = 0;
   // create new container
   var container = document.createElement("div");
-  container.className="container";
+  container.className = "container";
   // create new board for clicks to be shown
   var board = document.createElement("div");
-  board.className="board";
+  board.className = catsArray[i].board;
+  board.innerHTML = "You can click on "+catsArray[i].name+ " the cat";
   // create image for new cat
   var newImage = document.createElement("img");
-  newImage.setAttribute("src", "images/kitten.jpg");
+  newImage.setAttribute("src", catsArray[i].photo);
   newImage.className = "photo";
   // create click events
-  newImage.addEventListener("click", (function(clickCopy){
-    return function(){
+  newImage.addEventListener("click", (function(clickCopy) {
+    return function() {
       clickCopy++;
-      if (clickCopy===1){
-        let changeCount = document.querySelector(".board");
-        changeCount.innerHTML = ("You made "+clickCopy+" click");
-      }
-      else{
-        let changeCount = document.querySelector(".board");
-        changeCount.innerHTML = ("You made "+clickCopy+" clicks");
+      if (clickCopy === 1) {
+        let changeCount = document.getElementsByClassName(catsArray[clickCopy].board);
+        changeCount.innerHTML = ("You made " + clickCopy + " click");
+      } else {
+        let changeCount = document.getElementsByClassName(catsArray[clickCopy].board);
+        changeCount.innerHTML = ("You made " + clickCopy + " clicks");
       }
     }
   })(num));
@@ -34,7 +45,6 @@ for (var i = 0; i < catsArray.length; i++) {
   container.appendChild(board);
   document.body.appendChild(container);
 };
-
 
 
 
