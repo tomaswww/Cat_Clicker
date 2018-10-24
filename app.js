@@ -22,6 +22,7 @@ for (var i = 0; i < catsArray.length; i++) {
   // create new board for clicks to be shown
   var board = document.createElement("div");
   board.className = catsArray[i].board;
+  board.className = "board";
   board.innerHTML = "You can click on "+catsArray[i].name+ " the cat";
   // create image for new cat
   var newImage = document.createElement("img");
