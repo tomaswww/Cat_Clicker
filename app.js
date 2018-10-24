@@ -4,6 +4,13 @@ var catsArray = ["mickeyTheCat", "willyTheCat"];
 // Loop over array to define cats
 for (var i = 0; i < catsArray.length; i++) {
   var num = i;
+  var clickCopy=0;
+  // create new container
+  var container = document.createElement("div");
+  container.className="container";
+  // create new board for clicks to be shown
+  var board = document.createElement("div");
+  board.className="board";
   // create image for new cat
   var newImage = document.createElement("img");
   newImage.setAttribute("src", "images/kitten.jpg");
@@ -23,7 +30,9 @@ for (var i = 0; i < catsArray.length; i++) {
     }
   })(num));
   // append the new cat to a div section
-  document.body.appendChild(newImage);
+  container.appendChild(newImage);
+  container.appendChild(board);
+  document.body.appendChild(container);
 };
 
 
