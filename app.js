@@ -1,4 +1,4 @@
-document.body.innerHTML = "";
+
 const mickeyTheCat = {
   name: "Mickey",
   photo: "images/mickeyTheCat.jpg",
@@ -9,12 +9,29 @@ const willyTheCat = {
   photo: "images/willyTheCat.jpg",
   board: "Wboard"
 }
+// create de side bar :
+
+// <div class="sidenav">
+// <a href="#">About</a>
+// <a href="#">Services</a>
+// <a href="#">Clients</a>
+// <a href="#">Contact</a>
+// </div>
+
+var sideBar = document.createElement("div");
+sideBar.className = "sidenav";
 
 // Here we put cats on an Array
 var catsArray = [mickeyTheCat, willyTheCat];
 // Loop over array to define cats
 for (var i = 0; i < catsArray.length; i++) {
   var num = 0;
+// update de sidenav
+var newLink = document.createElement("a");
+newLink.setAttribute("href", "#");
+newLink.innerHTML=(catsArray[i].name);
+sideBar.appendChild(newLink);
+
   // create new container
   var container = document.createElement("div");
   container.className = "container";
@@ -46,6 +63,7 @@ for (var i = 0; i < catsArray.length; i++) {
   container.appendChild(newImage);
   container.appendChild(board);
   document.body.appendChild(container);
+  document.body.appendChild(sideBar);
 };
 
 

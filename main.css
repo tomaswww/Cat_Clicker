@@ -1,22 +1,42 @@
-.container{
-display: flex;
-flex-direction: column;
-align-items: center;
-border-style: solid;
-border-radius: 1em;
-margin-bottom: 1em;
+body {
+  display: flex;
+  width: 100%;
+  align-items: center;
 }
-.board{
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  order: -1;
+  border-style: ridge;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: solid;
+  border-radius: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.board {
   font-family: sans-serif;
   text-align: center;
   padding: 2%;
-  order:1;
+  order: 1;
+  width: 100%;
 }
-.photo{
+
+.photo {
   width: 80%;
-  order:2;
+  order: 2;
   border-radius: 2em;
 }
-.photo:hover{
+
+.photo:hover {
   cursor: pointer;
 }
