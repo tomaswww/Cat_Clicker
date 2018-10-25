@@ -11,7 +11,7 @@ const willyTheCat = {
 }
 
 // Here we put cats on an Array
-var catsArray = [mickeyTheCat,willyTheCat];
+var catsArray = [mickeyTheCat, willyTheCat];
 // Loop over array to define cats
 for (var i = 0; i < catsArray.length; i++) {
   var num = 0;
@@ -21,22 +21,22 @@ for (var i = 0; i < catsArray.length; i++) {
   // create new board for clicks to be shown
   var board = document.createElement("div");
   board.className = catsArray[i].board;
-  board.innerHTML = "You can click on "+catsArray[i].name+ " the cat";
+  board.innerHTML = "You can click on " + catsArray[i].name + " the cat";
   // create image for new cat
   var newImage = document.createElement("img");
   newImage.setAttribute("src", catsArray[i].photo);
   newImage.className = "photo";
   // create click events
-  newImage.addEventListener("click", (function(clickCopy) {
+  newImage.addEventListener("click", (function(clickCopy,nBoard) {
     return function() {
       clickCopy++;
       if (clickCopy === 1) {
-        board.innerHTML = ("You made " + clickCopy + " click");
+        nBoard.innerHTML = ("You made " + clickCopy + " click");
       } else {
-        board.innerHTML = ("You made " + clickCopy + " clicks");
+        nBoard.innerHTML = ("You made " + clickCopy + " clicks");
       }
     }
-  })(num));
+  })(num,board));
   // append the new cat to a div section
   container.appendChild(newImage);
   container.appendChild(board);
