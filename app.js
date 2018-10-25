@@ -18,6 +18,10 @@ for (var i = 0; i < catsArray.length; i++) {
   // create new container
   var container = document.createElement("div");
   container.className = "container";
+  // stablish cats cats name and title
+  var nameC = catsArray[i].name;
+  var titleName = document.createElement("div");
+  titleName.innerHTML = (catsArray[i].name+" the cat");
   // create new board for clicks to be shown
   var board = document.createElement("div");
   board.className = catsArray[i].board;
@@ -26,8 +30,6 @@ for (var i = 0; i < catsArray.length; i++) {
   var newImage = document.createElement("img");
   newImage.setAttribute("src", catsArray[i].photo);
   newImage.className = "photo";
-  // stablish cats cats name
-  var nameC = catsArray[i].name;
   // create click events
   newImage.addEventListener("click", (function(clickCopy,nBoard,catsName) {
     return function() {
@@ -40,6 +42,7 @@ for (var i = 0; i < catsArray.length; i++) {
     }
   })(num,board,nameC));
   // append the new cat to a div section
+  container.appendChild(titleName);
   container.appendChild(newImage);
   container.appendChild(board);
   document.body.appendChild(container);
