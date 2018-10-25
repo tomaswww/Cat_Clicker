@@ -17,3 +17,6 @@ margin-bottom: 1em;
   order:2;
   border-radius: 2em;
 }
+.photo:hover{
+  cursor: pointer;
+}

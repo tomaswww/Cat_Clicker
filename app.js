@@ -1,28 +1,26 @@
 document.body.innerHTML = "";
 const mickeyTheCat = {
-  name: "mickey",
+  name: "Mickey",
   photo: "images/mickeyTheCat.jpg",
-  board: "mickeyBoard"
+  board: "Mboard"
 }
 const willyTheCat = {
-  name: "willy",
+  name: "Willy",
   photo: "images/willyTheCat.jpg",
-  board: "willyBoard"
+  board: "Wboard"
 }
 
 // Here we put cats on an Array
 var catsArray = [mickeyTheCat,willyTheCat];
 // Loop over array to define cats
 for (var i = 0; i < catsArray.length; i++) {
-  var num = i;
-  var clickCopy = 0;
+  var num = 0;
   // create new container
   var container = document.createElement("div");
   container.className = "container";
   // create new board for clicks to be shown
   var board = document.createElement("div");
   board.className = catsArray[i].board;
-  board.className = "board";
   board.innerHTML = "You can click on "+catsArray[i].name+ " the cat";
   // create image for new cat
   var newImage = document.createElement("img");
@@ -33,11 +31,9 @@ for (var i = 0; i < catsArray.length; i++) {
     return function() {
       clickCopy++;
       if (clickCopy === 1) {
-        let changeCount = document.getElementsByClassName(catsArray[clickCopy].board);
-        changeCount.innerHTML = ("You made " + clickCopy + " click");
+        board.innerHTML = ("You made " + clickCopy + " click");
       } else {
-        let changeCount = document.getElementsByClassName(catsArray[clickCopy].board);
-        changeCount.innerHTML = ("You made " + clickCopy + " clicks");
+        board.innerHTML = ("You made " + clickCopy + " clicks");
       }
     }
   })(num));
