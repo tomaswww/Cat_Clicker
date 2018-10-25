@@ -26,17 +26,19 @@ for (var i = 0; i < catsArray.length; i++) {
   var newImage = document.createElement("img");
   newImage.setAttribute("src", catsArray[i].photo);
   newImage.className = "photo";
+  // stablish cats cats name
+  var nameC = catsArray[i].name;
   // create click events
-  newImage.addEventListener("click", (function(clickCopy,nBoard) {
+  newImage.addEventListener("click", (function(clickCopy,nBoard,catsName) {
     return function() {
       clickCopy++;
       if (clickCopy === 1) {
-        nBoard.innerHTML = ("You made " + clickCopy + " click");
+        nBoard.innerHTML = ("You made " + clickCopy + " click on "+catsName);
       } else {
-        nBoard.innerHTML = ("You made " + clickCopy + " clicks");
+        nBoard.innerHTML = ("You made " + clickCopy + " clicks on "+catsName);
       }
     }
-  })(num,board));
+  })(num,board,nameC));
   // append the new cat to a div section
   container.appendChild(newImage);
   container.appendChild(board);
