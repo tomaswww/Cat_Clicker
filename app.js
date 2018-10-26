@@ -32,19 +32,14 @@ for (var i = 0; i < catsArray.length; i++) {
   // create new container
   var container = document.createElement("div");
   container.className = "container";
+  container.classList.add("hidden");
+  container.id = catsArray[i].name;
   // add click feature to show only clicked kitten
   newLink.addEventListener("click", (function(containerToShow) {
     return function() {
-      for (var n = 0; n < catsArray.lenght; i++) {
-        var containerToHide = document.querySelector(".container");
-        if (containerToHide.classList.contains("show")) {
-          containerToHide.classList.remove("show");
-        };
-        containerToHide.classList.add("hidden");
-      };
       containerToShow.classList.remove("hidden");
       containerToShow.classList.add("show");
-    };
+      };
   })(container));
   sideBar.appendChild(newLink);
   // stablish cats cats name and title
