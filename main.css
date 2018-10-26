@@ -11,10 +11,12 @@ body {
 .sidenav {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  align-items: center;
+  width: 30%;
   height:100%;
   order: -1;
   border-style: solid;
+  border-radius: 2em;
 }
 
 .container {
@@ -23,7 +25,7 @@ body {
   flex-direction: column;
   align-items: center;
   border-style: solid;
-  border-radius: 1em;
+  border-radius: 2em;
   margin-bottom: 1em;
   width: 100%;
 }
@@ -37,7 +39,7 @@ body {
 }
 
 .photo {
-  width: 80%;
+  width: 100%;
   order: 2;
   border-radius: 2em;
 }
