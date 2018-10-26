@@ -19,6 +19,7 @@ const willyTheCat = {
 
 var sideBar = document.createElement("div");
 sideBar.className = "sidenav";
+sideBar.innerHTML= "Please choose Kitten to play with:";
 
 // Here we put cats on an Array
 var catsArray = [mickeyTheCat, willyTheCat];
