@@ -1,28 +1,29 @@
+// MODEL:
+// Create the cats as objects
 const mickeyTheCat = {
   name: "Mickey",
   photo: "images/mickeyTheCat.jpg",
   board: "Mboard"
-}
+  clickCount:0;
+};
 const willyTheCat = {
   name: "Willy",
   photo: "images/willyTheCat.jpg",
   board: "Wboard"
-}
+  clickCount:0;
+};
+// Here we put cats on an Array
+var catsArray = [mickeyTheCat, willyTheCat];
+
+initialize();
+
+function initialize(){
 // create de side bar :
-
-// <div class="sidenav">
-// <a href="#">About</a>
-// <a href="#">Services</a>
-// <a href="#">Clients</a>
-// <a href="#">Contact</a>
-// </div>
-
 var sideBar = document.createElement("div");
 sideBar.className = "sidenav";
 sideBar.innerHTML = "Please choose Kitten to play with:";
 
-// Here we put cats on an Array
-var catsArray = [mickeyTheCat, willyTheCat];
+
 // Loop over array to define cats
 for (var i = 0; i < catsArray.length; i++) {
   var num = 0;
@@ -79,27 +80,4 @@ container.appendChild(board);
 document.body.appendChild(container);
 document.body.appendChild(sideBar);
 };
-
-
-
-
-
-
-
-
-
-//
-//
-// var clickCount=0;
-// var kittenPhoto = document.querySelector(".photo");
-// kittenPhoto.addEventListener("click", function(){
-//   clickCount++;
-//   if (clickCount===1){
-//   let changeCount = document.querySelector(".board");
-//   changeCount.innerHTML = ("You made "+clickCount+" click");
-// }
-// else{
-//   let changeCount = document.querySelector(".board");
-//   changeCount.innerHTML = ("You made "+clickCount+" clicks");
-// }
-// }, false);
+};
