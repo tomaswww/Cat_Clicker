@@ -19,7 +19,7 @@ const willyTheCat = {
 
 var sideBar = document.createElement("div");
 sideBar.className = "sidenav";
-sideBar.innerHTML= "Please choose Kitten to play with:";
+sideBar.innerHTML = "Please choose Kitten to play with:";
 
 // Here we put cats on an Array
 var catsArray = [mickeyTheCat, willyTheCat];
@@ -37,41 +37,47 @@ for (var i = 0; i < catsArray.length; i++) {
   container.id = catsArray[i].name;
   // add click feature to show only clicked kitten
   newLink.addEventListener("click", (function(containerToShow) {
-    return function() {
-      containerToShow.classList.remove("hidden");
-      containerToShow.classList.add("show");
-      };
-  })(container));
-  sideBar.appendChild(newLink);
-  // stablish cats cats name and title
-  var nameC = catsArray[i].name;
-  var titleName = document.createElement("div");
-  titleName.innerHTML = (catsArray[i].name + " the cat");
-  // create new board for clicks to be shown
-  var board = document.createElement("div");
-  board.className = catsArray[i].board;
-  board.innerHTML = "You can click on " + catsArray[i].name + " the cat";
-  // create image for new cat
-  var newImage = document.createElement("img");
-  newImage.setAttribute("src", catsArray[i].photo);
-  newImage.className = "photo";
-  // create click events
-  newImage.addEventListener("click", (function(clickCopy, nBoard, catsName) {
-    return function() {
-      clickCopy++;
-      if (clickCopy === 1) {
-        nBoard.innerHTML = ("You made " + clickCopy + " click on " + catsName);
-      } else {
-        nBoard.innerHTML = ("You made " + clickCopy + " clicks on " + catsName);
+    for(let i=0;i<catsArray.lenght;i++){
+    var toHide = document.getElementsByClassName("show");
+    if (toHide.lenght>0){
+      toHide.classList.remove("show");
+      toHide.classList.add("hidden");
+    }};
+      return function() {
+          containerToShow.classList.remove("hidden");
+          containerToShow.classList.add("show");
       }
+  })(container));
+sideBar.appendChild(newLink);
+// stablish cats cats name and title
+var nameC = catsArray[i].name;
+var titleName = document.createElement("div");
+titleName.innerHTML = (catsArray[i].name + " the cat");
+// create new board for clicks to be shown
+var board = document.createElement("div");
+board.className = catsArray[i].board;
+board.innerHTML = "You can click on " + catsArray[i].name + " the cat";
+// create image for new cat
+var newImage = document.createElement("img");
+newImage.setAttribute("src", catsArray[i].photo);
+newImage.className = "photo";
+// create click events
+newImage.addEventListener("click", (function(clickCopy, nBoard, catsName) {
+  return function() {
+    clickCopy++;
+    if (clickCopy === 1) {
+      nBoard.innerHTML = ("You made " + clickCopy + " click on " + catsName);
+    } else {
+      nBoard.innerHTML = ("You made " + clickCopy + " clicks on " + catsName);
     }
-  })(num, board, nameC));
-  // append the new cat to a div section
-  container.appendChild(titleName);
-  container.appendChild(newImage);
-  container.appendChild(board);
-  document.body.appendChild(container);
-  document.body.appendChild(sideBar);
+  }
+})(num, board, nameC));
+// append the new cat to a div section
+container.appendChild(titleName);
+container.appendChild(newImage);
+container.appendChild(board);
+document.body.appendChild(container);
+document.body.appendChild(sideBar);
 };
 
 
