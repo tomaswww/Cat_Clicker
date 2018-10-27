@@ -3,17 +3,21 @@
 const mickeyTheCat = {
   name: "Mickey",
   photo: "images/mickeyTheCat.jpg",
-  board: "Mboard"
-  clickCount:0;
+  board: "Mboard",
+  clickCount:0
 };
 const willyTheCat = {
   name: "Willy",
   photo: "images/willyTheCat.jpg",
-  board: "Wboard"
-  clickCount:0;
+  board: "Wboard",
+  clickCount:0
 };
 // Here we put cats on an Array
 var catsArray = [mickeyTheCat, willyTheCat];
+
+
+// OCTOPUS:
+// Must get things started and tel thing when to happen!
 
 initialize();
 
