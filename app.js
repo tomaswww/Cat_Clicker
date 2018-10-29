@@ -49,6 +49,31 @@ incrementCounter: function(){
   // VIEW 1:
   // SideBar for cat Menu
   // create de side bar :
+  var catLinks = {
+    init: function(){
+      // select the panel where links will be placed
+      this.panel = document.getElementById("links");
+      // render the view based on this selection
+      this.render();
+    },
+    render: function() {
+      var catsArray = octopus.getCats();
+      this.panel.innerHTML=("");
+      // loop over the array to dislpay links
+      for (var i=0;i<catsArray.length;i++){
+        var cat = catsArray[i];
+        var newLink = document.createElement("li");
+        newLink.texContent=cat.name;
+        newLink.addEventListener("click",function(cat){
+          return function(){
+            octopus.clickCurrentCat(cat);
+            catPanel.render();
+          }
+        }(cat));
+        this.panel.appendChild(newLink);
+      };
+    }
+  };
 
 
   // VIEW 2:
@@ -61,7 +86,7 @@ var catPanel ={
     this.catNam = document.getElementById("kittenName");
     // set the event listener for picture of kittenName
     this.catPic.addEventListener("click", function(){
-      octopus.incrementCounter():
+      octopus.incrementCounter();
     });
     // render new view of container
     this.render();
@@ -74,3 +99,5 @@ var catPanel ={
     this.catNam = currentCat.name;
   }
 };
+
+octopus.init();
