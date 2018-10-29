@@ -1,37 +1,44 @@
 // MODEL:
-// Create the cats as objects
-const mickeyTheCat = {
+// Create the cats as objects on an Array
+var model ={
+  currentCat:null,
+  cats:[
+    {
   name: "Mickey",
   photo: "images/mickeyTheCat.jpg",
-  board: "Mboard",
   clickCount: 0
-};
-const willyTheCat = {
+},
+{
   name: "Willy",
   photo: "images/willyTheCat.jpg",
-  board: "Wboard",
   clickCount: 0
-};
+}];
+
+
 
 // OCTOPUS:
 // Must get things started and tell things when to happen!
 // define current cat
+
+
 // get from view 1 the cat selected
 // set the view 2 with data
 
-// Here we put cats on an Array
-var catsArray = [mickeyTheCat, willyTheCat];
+// Here we call the nav menu to display
+displayCat();
 
   // VIEW 1:
   // SideBar for cat Menu
   // create de side bar :
+  function displayCat(){
   for (var i = 0; i < catsArray.length; i++) {
     var newLink = document.createElement("a");
     newLink.setAttribute("href", "#");
     newLink.innerHTML = (catsArray[i].name);
-    var sideBar = document.getElementsByClassName("sidenav");
+    var sideBar = document.getElementsByClassName("links");
     sideBar.appendChild(newLink);
-  }
+  };
+};
 
 
   // VIEW 2:
