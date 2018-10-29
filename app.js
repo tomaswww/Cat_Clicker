@@ -63,8 +63,8 @@ incrementCounter: function(){
       for (var i=0;i<catsArray.length;i++){
         var cat = catsArray[i];
         var newLink = document.createElement("li");
-        newLink.texContent=cat.name;
-        newLink.addEventListener("click",function(cat){
+        newLink.innerHTML=cat.name;
+        newLink.addEventListener("click", function(cat){
           return function(){
             octopus.clickCurrentCat(cat);
             catPanel.render();
@@ -96,7 +96,7 @@ var catPanel ={
     var currentCat = octopus.defineCurrentCat();
     this.clickPanel.textContent = currentCat.clickCount;
     this.catPic.src = currentCat.photo;
-    this.catNam = currentCat.name;
+    this.catNam.textContent = currentCat.name;
   }
 };
 
