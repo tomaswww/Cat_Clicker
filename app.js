@@ -17,8 +17,32 @@ var model ={
 
 
 // OCTOPUS:
+var octopus = {
 // Must get things started and tell things when to happen!
 // define current cat
+
+init: function(){
+// starts by setting current cat to first on list
+  model.currentCat=model.cats[0];
+  // renders all views
+  catLinks.init();
+  catPanel.init();
+},
+defineCurrentCat: function(){
+  return model.currentCat;
+},
+// this sets the cat when clicked to current for display
+clickCurrentCat: function(cat){
+  model.currentCat=cat;
+},
+getCats: function(){
+  return model.cats;
+},
+incrementCounter: function(){
+  model.currentCat.clickCount++;
+  catPanel.render();
+}
+};
 
 
 // get from view 1 the cat selected
@@ -26,6 +50,7 @@ var model ={
 
 // Here we call the nav menu to display
 displayCat();
+};
 
   // VIEW 1:
   // SideBar for cat Menu
