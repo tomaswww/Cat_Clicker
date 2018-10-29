@@ -63,7 +63,7 @@ incrementCounter: function(){
       for (var i=0;i<catsArray.length;i++){
         var cat = catsArray[i];
         var newLink = document.createElement("li");
-        newLink.innerHTML=cat.name;
+        newLink.textContent=cat.name;
         newLink.addEventListener("click", function(cat){
           return function(){
             octopus.clickCurrentCat(cat);
