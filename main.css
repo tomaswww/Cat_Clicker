@@ -1,6 +1,8 @@
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  font-family: sans-serif;
 }
 .hidden{
   visibility: hidden;
@@ -13,9 +15,15 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 45%;
+  width: 100%;
   height:100%;
-  order: -1;
+}
+#links{
+    text-decoration: underline;
+}
+
+#links:hover{
+  cursor:pointer;
 }
 
 .container {
@@ -29,20 +37,11 @@ body {
   width: 100%;
 }
 
-.board {
-  font-family: sans-serif;
-  text-align: center;
-  padding: 2%;
-  order: 1;
+#photo {
   width: 100%;
-}
-
-.photo {
-  width: 100%;
-  order: 2;
   border-radius: 2em;
 }
 
-.photo:hover {
+#photo:hover {
   cursor: pointer;
 }
