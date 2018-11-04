@@ -95,9 +95,9 @@ var catPanel = {
   render: function() {
     // it updates the DOM view
     var currentCat = octopus.defineCurrentCat();
-    this.clickPanel.textContent = currentCat.clickCount;
+    this.clickPanel.textContent = currentCat.clickCount+" click/s";
     this.catPic.src = currentCat.photo;
-    this.catNam.textContent = currentCat.name;
+    this.catNam.textContent = currentCat.name+" the cat";
   }
 };
 
