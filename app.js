@@ -11,6 +11,21 @@ var model = {
       name: "Willy",
       photo: "images/willyTheCat.jpg",
       clickCount: 0
+    },
+    {
+      name: "Lucky",
+      photo: "images/luckyTheCat.jpg",
+      clickCount: 0
+    },
+    {
+      name: "Johnny",
+      photo: "images/johnnyTheCat.jpg",
+      clickCount: 0
+    },
+    {
+      name: "Jimmy",
+      photo: "images/jimmyTheCat.png",
+      clickCount: 0
     }
   ]
 };
