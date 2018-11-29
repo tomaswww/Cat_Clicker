@@ -1,50 +1,104 @@
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: sans-serif;
-  height:100%;
-}
-.hidden{
-  visibility: hidden;
-}
-.show {
-  visibility: visible;
-}
-.sidenav {
-  font-size: 2vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height:100%;
-}
-#links{
+/* for small screen */
+@media (max-width:1300px) {
+  body {
+    background-color: #e9fdff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gloria Hallelujah', sans-serif;
+    height: 100%;
+  }
+
+  .sidenav {
+    font-size: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+  }
+
+  #links {
     text-decoration: underline;
+  }
+
+  #links:hover {
+    cursor: pointer;
+  }
+
+  .container {
+    font-size: 3vw;
+    max-width: 600px;
+    background-color: #fddbde;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-radius: 2em;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+
+  #photo {
+    width: 70%;
+    border-radius: 50%;
+  }
+
+  #photo:hover {
+    cursor: pointer;
+  }
 }
 
-#links:hover{
-  cursor:pointer;
-}
+/* for big screen */
+@media (min-width:1301px) {
+  body {
+    background-color: #e9fdff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: 'Gloria Hallelujah', sans-serif;
+    height: 100%;
+  }
 
-.container {
-  font-size: 2vw;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-style: solid;
-  border-radius: 2em;
-  margin-bottom: 1em;
-  width: 100%;
-}
+  .sidenav {
+    font-size: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+  }
 
-#photo {
-  width: 70%;
-  border-radius: 2em;
-}
+  #links {
+    text-decoration: underline;
+  }
 
-#photo:hover {
-  cursor: pointer;
+  #links:hover {
+    cursor: pointer;
+  }
+
+  .container {
+    font-size: 2vw;
+    background-color: #fddbde;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-radius: 2em;
+    margin-bottom: 1em;
+    width: 50%;
+  }
+
+  #photo {
+    width: 70%;
+    border-radius: 2em;
+  }
+
+  #photo:hover {
+    cursor: pointer;
+  }
 }
