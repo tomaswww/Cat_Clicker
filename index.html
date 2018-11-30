@@ -12,8 +12,8 @@
     <ul id="links">
     </ul>
   </div>
-  <div class="container" data-bind="with: currentCat()">
-    <div data-bind="text: name" id="kittenName"></div>
+  <div class="container" data-bind="with:currentCat">
+    <h2 data-bind="text: name" id="kittenName"></h2>
     <img data-bind="attr: {src: photo}, data-bind=click: $parent.incrementCounter" id="photo"</img>
   </div>
 </body>
