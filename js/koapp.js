@@ -43,15 +43,17 @@ var self = this;
     self.catList.push(new Cat(catItem));
   });
 
-  this.currentCat = ko.observable(new Cat({
-    name: "Mickey",
-    photo: "images/mickeyTheCat.jpg",
-    clickCount: 0
-  }));
+  this.currentCat = ko.observable(this.catList()[0]);
+
+
 
   this.incrementCounter = function() {
-    this.clickCount(this.clickCount() + 1);
+    self.currentCat().clickCount(self.currentCat().clickCount() + 1);
   };
-}
+
+  this.setCat = function(clickedCat){
+    self.currentCat(clickedCat);
+  }
+};
 
 ko.applyBindings(new ViewModel());
