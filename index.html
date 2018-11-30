@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/main.css">
@@ -10,15 +11,19 @@
   <div class="sidenav">
     Please choose Kitten to play with:
     <ul id="links" data-bind="foreach: catList ">
-            <li data-bind="text: name, click: $parent.setCat"></li>
+      <li data-bind="text: name, click: $parent.setCat"></li>
     </ul>
   </div>
   <div class="container" data-bind="with:currentCat">
     <h2 data-bind="text: name" id="kittenName"></h2>
-    <h3 data-bind="text: clickCount"></h3>
     <img src="" data-bind="click: $parent.incrementCounter, attr: {src: photo}" id="photo"></img>
+<div id="clickCounterPanel">
+    <h4>click counter: </h4>
+    <h3 data-bind="text: clickCount"></h3>
+</div>
   </div>
 </body>
 <script type='text/javascript' src='js/knockout-3.4.2.js'></script>
 <script src="js/koapp.js"></script>
+
 </html>
