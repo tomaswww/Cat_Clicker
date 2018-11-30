@@ -14,6 +14,7 @@
   </div>
   <div class="container" data-bind="with:currentCat">
     <h2 data-bind="text: name" id="kittenName"></h2>
+    <h3 data-bind="text: clickCount"></h3>
     <img data-bind="attr: {src: photo}, data-bind=click: $parent.incrementCounter" id="photo"</img>
   </div>
 </body>
