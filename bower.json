@@ -1,0 +1,20 @@
+{
+  "name": "tomas",
+  "homepage": "https://github.com/tomaswww/Cat_Clicker",
+  "authors": [
+    "tomaswww <twingord@gmail.com>"
+  ],
+  "description": "cat clicker ex",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "^3.4.2"
+  }
+}

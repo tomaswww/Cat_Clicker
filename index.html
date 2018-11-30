@@ -1,9 +1,8 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Sedgwick+Ave" rel="stylesheet">
 </head>
 
@@ -13,12 +12,11 @@
     <ul id="links">
     </ul>
   </div>
-  <div class="container">
-    <div id="kittenName"></div>
-    <img src="" id="photo">
-    <div id="clicksDone"></div>
+  <div class="container" data-bind="with: currentCat()">
+    <div data-bind="text: name" id="kittenName"></div>
+    <img data-bind="attr: {src: photo}, data-bind=click: $parent.incrementCounter" id="photo"</img>
   </div>
 </body>
-<script src="app.js"></script>
-
+<script type='text/javascript' src='js/knockout-3.4.2.js'></script>
+<script src="js/koapp.js"></script>
 </html>
