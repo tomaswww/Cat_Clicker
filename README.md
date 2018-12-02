@@ -25,7 +25,7 @@ You need to download de repository, open the index.html file on your browser and
 
 ## Dependencies
 
--
+-Google Fonts for Gloria Hallelujah (https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Sedgwick+Ave")
 
 ## Contributing
 
