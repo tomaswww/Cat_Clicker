@@ -33,3 +33,5 @@ You need to download de repository, open the index.html file on your browser and
 ## Contributing
 
 Feel free to contribute with anything that optimizes code or even helps me improve my coding skills welcome!
+
+> Knowledge is of no value unless you put it into practice. **Anton Chekhov**
