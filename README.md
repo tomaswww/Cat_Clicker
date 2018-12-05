@@ -33,6 +33,3 @@ You need to download de repository, open the index.html file on your browser and
 ## Contributing
 
 Feel free to contribute with anything that optimizes code or even helps me improve my coding skills welcome!
-
-
-> Stay positive and happy. Work hard and don't give up hope. Be open to criticism and keep learning. Surround yourself with happy, warm and genuine people. **Tena Desae**
